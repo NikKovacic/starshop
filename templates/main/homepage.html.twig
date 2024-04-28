@@ -1,35 +1,41 @@
-<h1>Starshop: your monopoly-busting option for Starship parts!</h1>
+{% extends 'base.html.twig' %}
 
-<div>
-    Browse through {{ numberOfStarships }} starships!
+{% block title %}Starshop: Beam up some parts!{% endblock %}
 
-    {% if numberOfStarships > 400 %}
-        <p>
-            {# Do you think "shipload" will pass the legal team? #}
-            That's a shipload of ships!
-        </p>
-    {% endif %}
-</div>
+{% block body %}
+    <h1>Starshop: your monopoly-busting option for Starship parts!</h1>
 
-<div>
-    <h2>My ship</h2>
+    <div>
+        Browse through {{ numberOfStarships }} starships!
 
-    <table>
-        <tr>
-            <th>Name</th>
-            <td>{{ myShip.name }}</td>
-        </tr>
-        <tr>
-            <th>Class</th>
-            <td>{{ myShip.class }}</td>
-        </tr>
-        <tr>
-            <th>Captain</th>
-            <td>{{ myShip.captain }}</td>
-        </tr>
-        <tr>
-            <th>Status</th>
-            <td>{{ myShip.status }}</td>
-        </tr>
-    </table>
-</div>
+        {% if numberOfStarships > 400 %}
+            <p>
+                {# Do you think "shipload" will pass the legal team? #}
+                That's a shipload of ships!
+            </p>
+        {% endif %}
+    </div>
+
+    <div>
+        <h2>My ship</h2>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{ myShip.name }}</td>
+            </tr>
+            <tr>
+                <th>Class</th>
+                <td>{{ myShip.class }}</td>
+            </tr>
+            <tr>
+                <th>Captain</th>
+                <td>{{ myShip.captain }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ myShip.status }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
